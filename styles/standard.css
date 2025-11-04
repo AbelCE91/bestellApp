@@ -3,6 +3,11 @@ body{
     margin-block-start: 0;
     margin-block-end: 0;
 }
+main{
+    display: flex;
+    justify-content: space-between;
+    height: calc(100vh - 140px);
+}
 
 header{
     background-color: orange;
@@ -33,4 +38,17 @@ p{
 .name:hover{
     font-size: 20px;
     cursor: pointer;
+}
+
+.basket{
+    border: solid 2px;
+    width: 300px;
+    height: calc(100vh - 140px);
+
+}
+
+footer{
+    background-color: orange;
+    width: 100%;
+    height: 70px;
 }
