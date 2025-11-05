@@ -3,11 +3,8 @@ body{
     margin-block-start: 0;
     margin-block-end: 0;
 }
-main{
-    display: flex;
-    justify-content: space-between;
-    height: calc(100vh - 140px);
-}
+
+
 
 header{
     background-color: orange;
@@ -23,27 +20,72 @@ figure{
    margin-block-start: 0;
     margin-block-end: 0; 
 }
-.disches {
+
+
+.container{
+        background-image: url(../img/italian-food.jpg);
+     background-repeat: no-repeat;
+        background-position: center, center;
+        background-size: cover;
+        width: 100%;
+        height: 500px;
+        margin-inline-start: 0px;
+    margin-inline-end: 0px;
+}
+main{
+    
+    display: flex;
+    justify-content: space-between ;
+    width: 100%;
+    height: calc(100vh -140px);
+      
+        
+
+}
+.Pdisches{
+    padding-left: 20px;
+}
+.Pdischesname{
+    padding-left: 20px;
+}
+.Pdischesname:hover{
+     transition: 0.2s ease;
+     transform: scale(1.15);
+    cursor: pointer;
+}
+
+.disches{
     margin-left: 20px;
     margin-top: 20px;
     border: solid 2px;
-    width: 450px;
+    width: calc(100% - 50px);
 
 }
 
 p{
     margin-block: 0;
+    font-size: 20px;
+    
 }
 
-.name:hover{
-    font-size: 20px;
-    cursor: pointer;
+span{
+    padding-left: 20px;
 }
+
+.description{
+    padding-bottom: 10px;
+}
+
+
 
 .basket{
+    display: flex;
     border: solid 2px;
-    width: 300px;
+    width: 400px;
     height: calc(100vh - 140px);
+    background-color: white;
+    flex-direction: column;
+    
 
 }
 
@@ -51,4 +93,8 @@ footer{
     background-color: orange;
     width: 100%;
     height: 70px;
+}
+.content{
+    margin-top:530px;
+    
 }

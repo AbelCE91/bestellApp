@@ -1,6 +1,6 @@
 let myMenu = [
     {
-        "name":"pizza margarita",
+        "name":"Pizza margarita",
         "price" : 10,
         "description" : "delicious pizza with only Tomato sauce and Mozzarella cheese"
     },
@@ -12,5 +12,7 @@ let myMenu = [
     }
 
 ]
+
+let prices = [10,12]
 
 let basket =[]

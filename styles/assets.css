@@ -1,0 +1,53 @@
+.addicon{
+    width: 30px;
+   
+}
+
+.addicon:hover{
+    transition: 0.2s ease;
+    transform: scale(1.25);
+    cursor: pointer;
+}
+
+.nameadd{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    
+}
+
+
+.iconsQuantityminus,
+.iconsQuantityplus {
+  width: 20px;
+  
+ 
+}
+
+.iconsQuantityminus:hover,
+.iconsQuantityplus:hover {
+   transition: transform 0.2s ease;
+   transform: scale(1.25);
+   cursor: pointer;
+}
+
+
+
+.iconsX{
+    display: flex;
+    justify-content: center;
+}
+
+.trash{
+    width: 20px;
+}
+.trash:hover{
+    transition: transform 0.2s ease;
+    transform: scale(1.15);
+}
+.trashname{
+    display: flex;
+    justify-content: space-around;
+    margin-top: 10px;
+}
+
