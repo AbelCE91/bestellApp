@@ -15,6 +15,7 @@ function getTemplateMenu(indexMenu) {
 }
 
 function getTemplateToBasket(indexBasket) {
+  
   let box = basket[indexBasket];
   return `
     <div>
@@ -28,45 +29,9 @@ function getTemplateToBasket(indexBasket) {
         <img onclick="buyIndexBasket(${indexBasket})" class="iconsQuantityplus" src="./icons/mas.png" alt="">
         </div>
       </span>
+      <p>${box.price * box.quantity}€</p>
+
     </div>
+    
   `;
 }
-
-function deleteBasket(indexBasket) {
-  basket.splice(indexBasket, 1)
-  
-  renderBasket();
-}
-
-function buyIndexBasket(indexBasket) {
-  basket[indexBasket].quantity+=1;
-   renderBasket();
-}
-
-function minusIndexBasket(indexBasket) {
-  basket[indexBasket].quantity -=1;
-   renderBasket();
-}
-
-function minusIndexBasket(indexBasket) {
-  if (basket[indexBasket].quantity > 1) {
-    basket[indexBasket].quantity -= 1;
-  }
-  
-  renderBasket();
-}
-
-
-function buy(indexMenu) {
-  let selectedDish = myMenu[indexMenu];
-  let existing = basket.find(element => element.name === selectedDish.name);
-
-  if (existing) {
-    existing.quantity += 1; // aumentar contador
-  } else {
-    basket.push({ ...selectedDish, quantity: 1 }); // añadir nuevo con cantidad 1
-  }
-
-  renderBasket();
-}
-

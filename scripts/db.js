@@ -13,6 +13,4 @@ let myMenu = [
 
 ]
 
-let prices = [10,12]
-
 let basket =[]
