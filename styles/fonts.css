@@ -1,0 +1,49 @@
+h1{
+    margin-left: 20px;
+     font-family: "Noto Serif", serif;
+  font-optical-sizing: auto;
+  font-weight: 706;
+  font-style: normal;
+  font-variation-settings:
+    "wdth" 100;
+
+}
+
+.links{
+    margin-left: 20px;
+   font-family: "Noto Serif", serif;
+  font-optical-sizing: auto;
+  font-weight: 194;
+  font-style: normal;
+  font-variation-settings:
+    "wdth" 100;
+}
+.linkbeil{
+    font-size: 20px;
+    text-decoration: none;
+    margin-left: 10px;
+}
+.linkhaupt{
+    font-size: 20px;
+    text-decoration: none;
+}
+.linkhaupt:hover{
+    text-decoration: underline;
+}
+.linkbeil:hover{
+    
+    text-decoration: underline;
+}
+
+.footerlinks{
+    padding-left: 50px;
+    margin-top: 25px;
+    font-size: 20px;
+    text-decoration: none;
+}
+
+.footerlinks:hover{
+    font-size: 30px;
+    text-decoration: underline;
+}
+

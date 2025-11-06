@@ -11,7 +11,9 @@
     <script src="scripts/scritpbeilage.js"></script>
     <script src="scripts/dbbeilage.js"></script>
     <script src="scripts/templatebeilage.js"></script>
-
+       <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Delius&family=Noto+Serif:ital,wght@0,706;1,706&display=swap" rel="stylesheet">
 </head>
 <body onload="init1()">
     <div id="render"></div>
@@ -28,8 +30,10 @@
 
             <div class="content">
              <h1>Italian Restaurant</h1>
-             <a href="index.html">Hauptbeilagen</a>
-             <a href="beilage.html">Beilagen</a>
+             <div class="links">
+              <a class="linkhaupt" href="index.html">Hauptbeilagen</a>
+              <a class="linkbeil" href="beilage.html">Beilagen</a>
+             </div>
              <div id="content1"></div>
            </div>
 
@@ -45,6 +49,9 @@
       
 
       <footer>
+      <a class="footerlinks" href="#">Datenshutz</a>
+        <a class="footerlinks" href="#">AGB</a>
+        <a class="footerlinks" href="#">Impressum</a>
     
       </footer>
     

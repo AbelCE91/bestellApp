@@ -17,48 +17,51 @@ header{
 }
 
 figure{
-   margin-block-start: 0;
+    margin-block-start: 0;
     margin-block-end: 0; 
 }
 
 
 .container{
         background-image: url(../img/italian-food.jpg);
-     background-repeat: no-repeat;
+        background-repeat: no-repeat;
         background-position: center, center;
         background-size: cover;
         width: 100%;
         height: 500px;
         margin-inline-start: 0px;
-    margin-inline-end: 0px;
+        margin-inline-end: 0px;
 }
+
 main{
     
     display: flex;
     justify-content: space-between ;
     width: 100%;
     height: 100vh;
-      
-        
 
 }
 .Pdisches{
     padding-left: 20px;
 }
+
 .Pdischesname{
     padding-left: 20px;
 }
+
 .Pdischesname:hover{
      transition: 0.2s ease;
      transform: scale(1.15);
-    cursor: pointer;
+     cursor: pointer;
 }
 
 .disches{
     margin-left: 20px;
-    margin-top: 20px;
-    border: solid 2px;
+    margin-top: 20px; 
     width: calc(100% - 50px);
+    border-radius: 10px;
+    border-color: rgb(170, 170, 170);
+    box-shadow: 4px 4px 10px 0px rgba(0, 0, 0, 0.3)
 
 }
 
@@ -74,16 +77,13 @@ p{
     padding-bottom: 10px;
 }
 
-
-
 .basket{
     display: flex;
-    border: solid 2px;
     width: 400px;
-    height: 100vh;
-    background-color: white;
+    height: 1125px;
     flex-direction: column;
-    
+    box-shadow: 4px 4px 10px 10px rgba(0, 0, 0, 0.3);
+    border-color: rgb(170, 170, 170);
 
 }
 
@@ -91,9 +91,12 @@ footer{
     background-color: orange;
     width: 100%;
     height: 70px;
-
-    margin-top: 20px;
+    margin-top: 60px;
+    display: flex;
+    justify-content: center;
+    
 }
+
 .content{
     margin-top:530px;
     
