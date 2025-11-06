@@ -15,23 +15,20 @@ function render() {
 }
 
 function renderBasket() {
+  let total= 0
   let basketRef = document.getElementById("basket")
   basketRef.innerHTML = "";
-
-  basketRef.innerHTML += `
-    <h2>Warenkorb</h2>
-   `;
-
-let total= 0
+  basketRef.innerHTML += `<h2 class="warenkorb">Warenkorb</h2>`;
 
   for (let indexBasket = 0; indexBasket < basket.length; indexBasket++) {
     basketRef.innerHTML += getTemplateToBasket(indexBasket);
     total += basket[indexBasket].price * basket[indexBasket].quantity
+
   }
-  basketRef.innerHTML += `
-    <div class="basket-total">
+  basketRef.innerHTML +=
+   `<div>
       <hr>
-      <p><strong>Total:</strong> ${total.toFixed(2)}€</p>
+      <p class="basket-total"><strong>Total:</strong> ${total.toFixed(2)}€</p>
     </div>
   `;
 }
@@ -75,15 +72,10 @@ function deleteBasket(indexBasket) {
 }
 
 
-function buy(indexMenu) {
-  let selectedDish = myMenu[indexMenu];
-  let existing = basket.find(element => element.name === selectedDish.name);
-
-  if (existing) {
-    existing.quantity += 1; // aumentar contador
-  } else {
-    basket.push({ ...selectedDish, quantity: 1 }); // añadir nuevo con cantidad 1
+function minusIndexBasket(indexBasket) {
+  if (basket[indexBasket].quantity > 1) {
+    basket[indexBasket].quantity -= 1;
   }
-
   renderBasket();
 }
+

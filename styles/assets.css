@@ -47,7 +47,9 @@
 }
 .trashname{
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
     margin-top: 10px;
+    margin-left: 10px;
+    margin-right: 10px;
 }
 
