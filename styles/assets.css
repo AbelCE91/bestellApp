@@ -53,3 +53,25 @@
     margin-right: 10px;
 }
 
+.burger{
+    width: 40px;
+    height: 35px;
+}
+.header-icons{
+ display: flex;
+ justify-content: space-between;
+ align-items: center;
+}
+
+
+.xwarenkorb{
+    width: 20px;
+    height: 20px;
+    margin-top: 5px;
+    margin-right: 5px;
+}
+.warenkorbIcons{
+    display: flex;
+    justify-content: space-between;
+
+}

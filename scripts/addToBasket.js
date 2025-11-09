@@ -22,10 +22,15 @@ function addToBasket(element) {
 
 function renderBasket() {
   let total = 0;
-  let warenkorb = `<h2 class="warenkorb">Warenkorb</h2>`;
+  let warenkorb = `
+  <div class="warenkorbIcons">
+    <h2 class="warenkorb">Warenkorb</h2>
+    <img onclick="Xicon()" class="xwarenkorb" src="./icons/delete (1).png" alt="">
+  </div>`;
 
   for (let indexBas = 0; indexBas < basket.length; indexBas++) {
-    warenkorb += getTemplateToBasket(indexBas);
+    warenkorb += getTemplateToBasket(indexBas); 
+    total += basket[indexBas].price * basket[indexBas].quantity;
   }
 
   warenkorb += `

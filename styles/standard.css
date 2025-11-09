@@ -2,6 +2,7 @@ body{
     margin: 0;
     margin-block-start: 0;
     margin-block-end: 0;
+    
 }
 
 
@@ -77,17 +78,10 @@ p{
     padding-bottom: 10px;
 }
 
-.basket{
-    display: flex;
-    width: 400px;
-    height: 1125px;
-    flex-direction: column;
-    box-shadow: 4px 4px 10px 10px rgba(0, 0, 0, 0.3);
-    border-color: rgb(170, 170, 170);
 
-}
 
 footer{
+    display: flex;
     background-color: orange;
     width: 100%;
     height: 70px;
@@ -106,11 +100,79 @@ footer{
  margin-left: 20px;
 
 }
-.warenkorb{
-    margin-left: 10px;
-}
+
 
 .pricequantity{
 
     margin-left: 10px;
+}
+
+
+@media(min-width:751px) {
+  .xwarenkorb{
+    display: none;
+  }
+}
+
+
+
+
+@media(max-width:1630px){
+    footer{
+        margin-top: 150px;
+    }
+}
+
+@media(max-width:845px){
+    footer{
+        margin-top: 160px;
+    }
+    
+}
+
+@media(max-width:750px){
+    footer{
+        margin-top: 190px;
+
+    }
+    
+}
+
+
+@media(max-width:440px){
+    footer{
+        margin-top: 610px;
+
+    }
+    
+}
+@media(max-width:438px){
+    footer{
+        margin-top: 210px;
+
+    }
+    
+}
+@media(max-width:374px){
+    footer{
+        margin-top: 250px;
+        flex-direction: column;
+        padding-top: 10px;
+        padding-bottom: 20px;
+        height: 150px;
+
+    }
+    
+}
+
+@media(max-width:373px){
+    footer{
+        margin-top: 250px;
+        flex-direction: column;
+        padding-top: 10px;
+        padding-bottom: 20px;
+        height: 150px;
+
+    }
+    
 }
