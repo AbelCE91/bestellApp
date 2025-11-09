@@ -19,4 +19,4 @@ let beilageMenu = [
 
 ]
 
-let = beilageBasket =[]
+let basket =[]
