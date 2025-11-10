@@ -1,6 +1,6 @@
 h1{
-    margin-left: 20px;
-     font-family: "Noto Serif", serif;
+  margin-left: 30px;
+  font-family: "Noto Serif", serif;
   font-optical-sizing: auto;
   font-weight: 706;
   font-style: normal;
@@ -25,6 +25,7 @@ h1{
     color: black;
 }
 .linkhaupt{
+    margin-left: 30px;
     font-size: 20px;
     text-decoration: none;
     color: black;

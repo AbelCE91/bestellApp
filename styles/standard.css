@@ -39,7 +39,7 @@ main{
     display: flex;
     justify-content: space-between ;
     width: 100%;
-    height: 100vh;
+    height: 100vb;
 
 }
 .Pdisches{
@@ -72,8 +72,6 @@ p{
     
 }
 
-
-
 .description{
     padding-bottom: 10px;
 }
@@ -81,11 +79,11 @@ p{
 
 
 footer{
-    display: flex;
+    
     background-color: orange;
     width: 100%;
     height: 70px;
-    margin-top: 60px;
+    margin-top: 50px;
     display: flex;
     justify-content: center;
     
@@ -93,6 +91,7 @@ footer{
 
 .content{
     margin-top:530px;
+    margin-left: 10px;
     
 }
 
@@ -101,12 +100,14 @@ footer{
 
 }
 
-
 .pricequantity{
 
     margin-left: 10px;
 }
 
+.titleLink{
+    margin-top: 520px;
+}
 
 @media(min-width:751px) {
   .xwarenkorb{
@@ -117,62 +118,3 @@ footer{
 
 
 
-@media(max-width:1630px){
-    footer{
-        margin-top: 150px;
-    }
-}
-
-@media(max-width:845px){
-    footer{
-        margin-top: 160px;
-    }
-    
-}
-
-@media(max-width:750px){
-    footer{
-        margin-top: 190px;
-
-    }
-    
-}
-
-
-@media(max-width:440px){
-    footer{
-        margin-top: 610px;
-
-    }
-    
-}
-@media(max-width:438px){
-    footer{
-        margin-top: 210px;
-
-    }
-    
-}
-@media(max-width:374px){
-    footer{
-        margin-top: 250px;
-        flex-direction: column;
-        padding-top: 10px;
-        padding-bottom: 20px;
-        height: 150px;
-
-    }
-    
-}
-
-@media(max-width:373px){
-    footer{
-        margin-top: 250px;
-        flex-direction: column;
-        padding-top: 10px;
-        padding-bottom: 20px;
-        height: 150px;
-
-    }
-    
-}

@@ -44,6 +44,7 @@
 .trash:hover{
     transition: transform 0.2s ease;
     transform: scale(1.15);
+    cursor: pointer;
 }
 .trashname{
     display: flex;
