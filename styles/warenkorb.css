@@ -90,6 +90,7 @@
    .footerlinks{
     padding-left: 0;
    }
+   
   footer{
     margin-top: 200px;
     flex-direction: column;
@@ -97,6 +98,17 @@
     height: 150px;
     padding-bottom: 20px;
   }
+  #basket{
+  width: 300px;
+}
+
+ @media(max-width:412px){
+
+  footer{
+    margin-top: 400px;
+  }
+
+}
 
 }
  @media(max-width:385px){
@@ -111,6 +123,7 @@
 
   footer{
     margin-top: 530px;
+
   }
 
 }
@@ -119,6 +132,22 @@
 
   footer{
     margin-top: 220px;
+  }
+
+}
+
+@media(max-width:360px){
+
+  footer{
+    margin-top: 560px;
+  }
+
+}
+
+@media(max-width:355px){
+
+  footer{
+    margin-top: 2200px;
   }
 
 }
