@@ -1,25 +1,3 @@
-
-
-function saveToLocalStorage() {
-  localStorage.setItem("basket", JSON.stringify(basket));
-}
-
-function getFromLocalStorage() {
-  let storedBasket = localStorage.getItem("basket");
-  basket = storedBasket ? JSON.parse(storedBasket) : [];
-}
-
-function addToBasket(element) {
-  let existing = basket.find(el => el.name === element.name);
-  if (existing) {
-    existing.quantity += 1;
-  } else {
-    basket.push({ ...element, quantity: 1 });
-  }
-  saveToLocalStorage();
-  renderBasket();
-}
-
 function renderBasket() {
   let total = 0;
   let warenkorb = `
@@ -43,6 +21,28 @@ function renderBasket() {
   const basketRef = document.getElementById("basket");
   if (basketRef) basketRef.innerHTML = warenkorb;
 
-  const basket1Ref = document.getElementById("basket1");
-  if (basket1Ref) basket1Ref.innerHTML = warenkorb;
+
 }
+
+
+
+function saveToLocalStorage() {
+  localStorage.setItem("basket", JSON.stringify(basket));
+}
+
+function getFromLocalStorage() {
+  let storedBasket = localStorage.getItem("basket");
+  basket = storedBasket ? JSON.parse(storedBasket) : [];
+}
+
+function addToBasket(element) {
+  let existing = basket.find(el => el.name === element.name);
+  if (existing) {
+    existing.quantity += 1;
+  } else {
+    basket.push({ ...element, quantity: 1 });
+  }
+  saveToLocalStorage();
+  renderBasket();
+}
+

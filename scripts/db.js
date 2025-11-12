@@ -5,11 +5,6 @@ let myMenu = [
         "description" : "delicious pizza with only Tomato sauce and Mozzarella cheese"
     },
 
-    {
-        "name" : "Spagueti Bolognese",
-        "price" : 12,
-        "description" : "Delicious Pasta with Tomato and ground meat"
-    },
 
      {
         "name" : "Pizzabrötchen",
@@ -25,9 +20,21 @@ let myMenu = [
 
      {
         "name" : "Pizza Diabolo",
-        "price" : 6,
+        "price" : 11,
         "description" : "Pozza with picant pepperoni"
-    }
+    },
+
+    {
+        "name" : "Pizza quattro formatge",
+        "price" : 12,
+        "description" : "Pizza mit verschiedene Käsesorten"
+    },
+
+    {
+        "name" : "Pizza fungi",
+        "price" : 12,
+        "description" : "Pizza mit champiggnons"
+    },
 ]
 
 

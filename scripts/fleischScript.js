@@ -1,55 +1,44 @@
-
-function init() {
-
-    getFromLocalStorage()
-    render()
-    renderBasket()
-  
+function initFleisch(){
+  renderFleisch()  
+  renderBasket()
 }
 
-function render() {
-    let myMenuRef = document.getElementById("content")
-    myMenuRef.innerHTML = " ";
-    for (let indexMenu = 0; indexMenu < myMenu.length; indexMenu++) {
+function renderFleisch() {
+    let fleischMenuRef = document.getElementById("contentFleisch")
+    fleischMenuRef.innerHTML = "";
+
+    for (let indexFleisch = 0; indexFleisch < fleischMenu.length; indexFleisch++) {
+
+        fleischMenuRef.innerHTML += getTemplateToFleisch(indexFleisch)
         
-        myMenuRef.innerHTML += getTemplateMenu(indexMenu)
     }
- 
+    
 }
 
-function buy(indexMenu) {
-  addToBasket(myMenu[indexMenu]);
-}
 
-function minusIndexBasket(indexBas) {
-  basket[indexBas].quantity -=1;
-  saveToLocalStorage()
-   renderBasket();
-   
-}
+function buy(indexFleisch) {
+    addToBasket(fleischMenu[indexFleisch]).quantity +=1;
 
-function buyIndexBasket(indexBas) {
-  basket[indexBas].quantity+=1;
-  saveToLocalStorage()
-   renderBasket();
-   
-}
+    renderFleisch()
 
+}
 function deleteBasket(indexBas) {
-  basket.splice(indexBas, 1)
-  saveToLocalStorage()
-  renderBasket();
- 
+    basket.splice(indexBas,1)
+    renderBasket()
 }
 
 function minusIndexBasket(indexBas) {
-  if (basket[indexBas].quantity > 1) {
-    basket[indexBas].quantity -= 1;
-  }
-  saveToLocalStorage()
-  renderBasket();
-  
+    if (basket[indexBas].quantity >1) {
+        basket[indexBas].quantity -=1
+        
+    }
+    renderBasket()
 }
+function buyIndexBasket(indexBas) {
+basket[indexBas].quantity +=1
+ renderBasket()
+}
+
 
 function ajustarBasket() {
   const basket = document.getElementById('basket');
@@ -81,4 +70,3 @@ function Xicon() {
 // Ejecutar al cargar y al redimensionar
 window.addEventListener('DOMContentLoaded', ajustarBasket);
 window.addEventListener('resize', ajustarBasket);
-

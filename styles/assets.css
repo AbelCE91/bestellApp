@@ -76,3 +76,45 @@
     justify-content: space-between;
 
 }
+
+
+.linkgerichte1{
+    text-decoration: none;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: black;
+    border-radius: 10px;
+}
+
+.linkgerichte1:hover{
+    text-decoration: underline;
+    
+    
+}
+
+.linkgerichte1{
+    text-decoration: none;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: black;
+    border-radius: 10px;
+}
+
+.linkgerichte1:hover{
+    text-decoration: underline;
+    
+    
+}
+
+.imglinks1 {
+  border: solid 1px transparent; /* ya reserva espacio para el borde */
+  border-radius: 10px;
+  width: 150px;
+ 
+}
+
+.imglinks1:hover {
+  border-color: black; /* solo cambia el color, no el tamaño */
+}

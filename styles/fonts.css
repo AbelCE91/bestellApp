@@ -10,33 +10,31 @@ h1{
 }
 
 .links{
+    display: flex;
+    justify-content: space-around;
     margin-left: 20px;
    font-family: "Noto Serif", serif;
   font-optical-sizing: auto;
   font-weight: 194;
   font-style: normal;
-  font-variation-settings:
-    "wdth" 100;
+  font-variation-settings:"wdth" 100;
 }
-.linkbeil{
+.linkgerichte{
     font-size: 20px;
     text-decoration: none;
     margin-left: 10px;
     color: black;
 }
-.linkhaupt{
+.linkgerichte{
     margin-left: 30px;
     font-size: 20px;
     text-decoration: none;
     color: black;
 }
-.linkhaupt:hover{
+.linkgerichte:hover{
     text-decoration: underline;
 }
-.linkbeil:hover{
-    
-    text-decoration: underline;
-}
+
 
 .footerlinks{
     padding-left: 50px;

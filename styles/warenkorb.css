@@ -13,8 +13,8 @@
 
   right: 0;
   top: 0;
-  width: 400px;
-  height: 100vh;
+  width: 600px;
+  height: 1175px;
   flex-direction: column;
   background-color: #f5f5f5;
   box-shadow: 4px 4px 10px 10px rgba(0, 0, 0, 0.3);
@@ -24,10 +24,11 @@
   transition: transform 0.3s ease, opacity 0.3s ease;
   border-color: rgb(170, 170, 170);
   padding-bottom: 20px;
-  
-  
+
 
 }
+
+
 
 /* Cuando está visible */
 #basket.visible {
@@ -37,15 +38,11 @@
 }
 @media(max-width:1670px){
 
-  footer{
-    margin-top: 130px;
-  }
-  #basket{
+  .basket{
     padding-bottom: 110px;
   }
   
 }  
-
 
 
 @media(max-width:859px){
@@ -53,13 +50,11 @@
   footer{
     margin-top: 150px;
   }
-  #basket{
+  .basket{
     padding-bottom: 130px;
   }
   
 }
-
-
 
     @media(min-width:751px) {
   .xwarenkorb{
@@ -100,6 +95,13 @@
   }
   #basket{
   width: 300px;
+}
+ @media(max-width:430px){
+
+  footer{
+    margin-top: 300px;
+  }
+
 }
 
  @media(max-width:412px){

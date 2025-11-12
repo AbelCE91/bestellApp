@@ -9,59 +9,53 @@
     <link rel="stylesheet" href="styles/standard.css">
     <link rel="stylesheet" href="styles/warenkorb.css">
     <script src="scripts/addToBasket.js"></script>
-    <script src="scripts/dbbeilage.js"></script>
-    <script src="scripts/templatebeilage.js"></script>    
-     <script src="scripts/scritpbeilage.js"></script>
-       <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Delius&family=Noto+Serif:ital,wght@0,706;1,706&display=swap" rel="stylesheet">
+    <script src="scripts/FleischDB.js"></script>
+    <script src="scripts/FleischTemplate.js"></script>
+    <script src="scripts/fleischScript.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Delius&family=Noto+Serif:ital,wght@0,706;1,706&display=swap" rel="stylesheet">
 </head>
-<body onload="init1()">
-    <div id="render"></div>
-
-      <header>
-           <figure class="header-icons">
-             <img class="logo" src="./img/Logo.png" alt="">
+<body onload="initFleisch()">
+         <header>
+        <figure class="header-icons">
+            <img class="logo" src="./img/Logo.png" alt="">
             <img onclick="burgerMenu()" class="burger" src="./icons/burger-bar.png" alt="">
             
         </figure>
       </header>
      
       <main>
-        
-          <div class="container">
 
-            <div class="content">
-          <div class="titleLink">
+            <div class="container" class="content">
+              <div class="titleLink">
                 <h1>Bambini Itlian Restaurant</h1>
                 <div class="links">                      
                     <a class="linkgerichte1" href="index.html"><img class="imglinks1" src="./img/pizzas.jpg" alt=""><p>Pizzas</p></a>
                     <a class="linkgerichte1" href="nudel.html"><img class="imglinks1" src="./img/nudeln.jpg" alt=""><p>Nudel</p></a>
-                    <a class="linkgerichte1" href="#"><img class="imglinks1" src="./img/fleish.jpg" alt=""><p>Fleisch</p></a>
+                    <a class="linkgerichte1" href="Fleisch.html"><img class="imglinks1" src="./img/fleish.jpg" alt=""><p>Fleisch</p></a>
                     <a class="linkgerichte1" href="#"><img class="imglinks1" src="./img/fish.jpg" alt=""><p>Fisch</p></a>
                     <a class="linkgerichte1" href="beilage.html"><img class="imglinks1" src="./img/beilage.jpg" alt=""><p>Beilage</p></a>
                     <a class="linkgerichte1" href="#"><img class="imglinks1" src="./img/getränke.jpg" alt=""><p>Getränke</p></a>
                 </div>
               </div>
-             <div id="content1"></div>
-           </div>
-
-        </div>
+              
+               <div id="contentFleisch"></div>
+               
+            </div>
+          
           
          <div class="basket" id="basket">
           
          </div>
          <p id="total-price"></p>
        
-      
       </main>
-      
-
+   
       <footer>
-      <a class="footerlinks" href="#">Datenshutz</a>
-        <a class="footerlinks" href="#">AGB</a>
-        <a class="footerlinks" href="#">Impressum</a>
-    
+        <a class="footerlinks" href="datenschutz.html">Datenshutz</a>
+        <a class="footerlinks" href="agb.html">AGB</a>
+        <a class="footerlinks" href="impressum.html">Impressum</a>
       </footer>
     
     </div>

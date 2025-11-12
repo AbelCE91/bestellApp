@@ -14,18 +14,18 @@ function getTemplateMenu(indexMenu) {
     
 }
 
-function getTemplateToBasket(indexBasket) {
-    let box = basket[indexBasket];
+function getTemplateToBasket(indexBas) {
+    let box = basket[indexBas];
   return `
     <div>
-      <p class="trashname"><strong>${box.name}</strong> <img onclick="deleteBasket(${indexBasket})" class="trash" src="./icons/trash.png" alt=""> </p>
+      <p class="trashname"><strong>${box.name}</strong> <img onclick="deleteBasket(${indexBas})" class="trash" src="./icons/trash.png" alt=""> </p>
       <span class="iconsX">
       <div>
-        <img onclick="minusIndexBasket(${indexBasket})" class="iconsQuantityminus" src="./icons/menos.png" alt="">
+        <img onclick="minusIndexBasket(${indexBas})" class="iconsQuantityminus" src="./icons/menos.png" alt="">
        </div> 
         <p>x(${box.quantity})</p>
         <div>
-        <img onclick="buyIndexBasket(${indexBasket})" class="iconsQuantityplus" src="./icons/mas.png" alt="">
+        <img onclick="buyIndexBasket(${indexBas})" class="iconsQuantityplus" src="./icons/mas.png" alt="">
         </div>
       </span>
       <p class="pricequantity">${box.price * box.quantity}€</p>
@@ -34,3 +34,4 @@ function getTemplateToBasket(indexBasket) {
     
   `;
 }
+
