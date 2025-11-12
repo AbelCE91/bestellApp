@@ -9,15 +9,14 @@
     <link rel="stylesheet" href="styles/standard.css">
     <link rel="stylesheet" href="styles/warenkorb.css">
     <script src="scripts/addToBasket.js"></script>
-     <script src="scripts/db.js"></script>
-    <script src="scripts/template.js"></script>
-    <script src="scripts/script.js"></script>
+    <script src="scripts/fischDB.js"></script>
+    <script src="scripts/fischTemplate.js"></script>
+    <script src="scripts/fischScript.js"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Delius&family=Noto+Serif:ital,wght@0,706;1,706&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Delius&family=Noto+Serif:ital,wght@0,706;1,706&display=swap" rel="stylesheet">
 </head>
-<body onload="init()">
-    <div id="render"></div>
+<body onload="initFisch()">
 
       <header>
         <figure class="header-icons">
@@ -26,10 +25,8 @@
             
         </figure>
       </header>
-     
-      <main>
-
-            <div class="container" class="content">
+             <main>
+               <div class="container" class="content">
               <div class="titleLink">
                 <h1>Bambini Itlian Restaurant</h1>
                 <div class="links">                      
@@ -42,7 +39,7 @@
                 </div>
               </div>
               
-               <div id="content"></div>
+               <div id="contentFisch"></div>
                
             </div>
           
@@ -61,6 +58,5 @@
       </footer>
     
     </div>
-    
 </body>
 </html>
