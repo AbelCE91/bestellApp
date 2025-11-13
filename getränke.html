@@ -20,12 +20,27 @@
     <header>
         <figure class="header-icons">
             <img class="logo" src="./img/Logo.png" alt="">
-            <img onclick="burgerMenu()" class="burger" src="./icons/burger-bar.png" alt="">
+             <div>
+              <img onclick="burgerMenu()" class="burger" src="./icons/burger-bar.png" alt="">
+              <img onclick="opendialog()" class="imgbasket" src="./icons/basket.png" alt="">
+            </div>
             
         </figure>
       </header>
      
       <main>
+
+        <dialog id="myDialog">
+            <div class="headerDialog">
+              <img onclick="closeDialog()" class="xwarenkorb" src="./icons/delete (1).png" alt="">
+            </div>
+           <section>
+              <div class="basket" id="basket"></div>
+              <p id="total-price"></p>
+           </section>
+           
+                
+        </dialog>
 
             <div class="container" class="content">
               <div class="titleLink">
@@ -45,11 +60,7 @@
             </div>
           
           
-         <div class="basket" id="basket">
-          
-         </div>
-         <p id="total-price"></p>
-       
+ 
       </main>
    
       <footer>
@@ -59,5 +70,6 @@
       </footer>
     
     </div>
+    <script src="scripts/dialog.js"></script>
 </body>
 </html>

@@ -2,6 +2,7 @@ function init1() {
     getFromLocalStorage()
     renderBeilage()
      renderBasket()
+     
 }
 
 function renderBeilage() {

@@ -118,3 +118,6 @@
 .imglinks1:hover {
   border-color: black; /* solo cambia el color, no el tamaño */
 }
+.imgbasket{
+    width: 40px;
+}

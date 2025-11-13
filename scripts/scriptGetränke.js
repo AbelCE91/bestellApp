@@ -1,6 +1,8 @@
 function initGetränk() {
+  getFromLocalStorage()
 renderGetränk()
 renderBasket()
+
     
 }
 
@@ -17,7 +19,7 @@ function renderGetränk() {
 function buy(indexGetränk) {
   addToBasket(getränke[indexGetränk]).quantity +=1
   renderGetränk()
-
+saveToLocalStorage()
 }
 
 function minusIndexBasket(indexBas) {
@@ -25,16 +27,20 @@ function minusIndexBasket(indexBas) {
         basket[indexBas].quantity -=1
     }
     renderBasket()
+    saveToLocalStorage()
 }
 
 function buyIndexBasket(indexBas) {
     basket[indexBas].quantity +=1
     renderBasket()
+    saveToLocalStorage()
     
 }
 
 function deleteBasket(indexBas) {
     basket.splice(indexBas,1)
+     saveToLocalStorage()
+  renderBasket();
 }
 
 

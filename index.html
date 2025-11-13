@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="styles/fonts.css">
     <link rel="stylesheet" href="styles/standard.css">
     <link rel="stylesheet" href="styles/warenkorb.css">
+   
     <script src="scripts/addToBasket.js"></script>
      <script src="scripts/db.js"></script>
     <script src="scripts/template.js"></script>
@@ -22,12 +23,24 @@
       <header>
         <figure class="header-icons">
             <img class="logo" src="./img/Logo.png" alt="">
+            <div>
             <img onclick="burgerMenu()" class="burger" src="./icons/burger-bar.png" alt="">
-            
+            <img onclick="opendialog()" class="imgbasket" src="./icons/basket.png" alt="">
+           </div>
         </figure>
       </header>
      
       <main>
+        <dialog id="myDialog">
+            <div class="headerDialog">
+              <img onclick="closeDialog()" class="xwarenkorb" src="./icons/delete (1).png" alt="">
+            </div>
+           <section>
+              <div class="basket" id="basket"></div>
+              <p id="total-price"></p>
+           </section>
+   
+        </dialog>
 
             <div class="container" class="content">
               <div class="titleLink">
@@ -44,14 +57,9 @@
               
                <div id="content"></div>
                
+               
             </div>
-          
-          
-         <div class="basket" id="basket">
-          
-         </div>
-         <p id="total-price"></p>
-       
+
       </main>
    
       <footer>
@@ -63,4 +71,5 @@
     </div>
     
 </body>
+<script src="scripts/dialog.js"></script>
 </html>

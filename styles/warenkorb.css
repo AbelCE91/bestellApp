@@ -14,15 +14,10 @@
   right: 0;
   top: 0;
   width: 600px;
-  height: 1175px;
+  height: 600px;
   flex-direction: column;
-  background-color: #f5f5f5;
-  box-shadow: 4px 4px 10px 10px rgba(0, 0, 0, 0.3);
-  transform: translateX(100%);
   opacity: 0;
   pointer-events: none;
-  transition: transform 0.3s ease, opacity 0.3s ease;
-  border-color: rgb(170, 170, 170);
   padding-bottom: 20px;
 
 
@@ -56,11 +51,8 @@
   
 }
 
-    @media(min-width:751px) {
-  .xwarenkorb{
-    display: none;
-  }
-}
+ 
+
 
 @media(min-width:751px) {
   #basket {

@@ -105,11 +105,7 @@ footer{
     margin-top: 520px;
 }
 
-@media(min-width:751px) {
-  .xwarenkorb{
-    display: none;
-  }
-}
+
 
 
 
