@@ -77,7 +77,8 @@
 
 }
 
-
+.warenkorbIconsDialog{display: flex;
+    justify-content: space-between;}
 .linkgerichte1{
     text-decoration: none;
     display: flex;
@@ -120,4 +121,10 @@
 }
 .imgbasket{
     width: 40px;
+}
+
+@media(min-width:750px){
+    .imgbasket{
+        display: none;
+    }
 }

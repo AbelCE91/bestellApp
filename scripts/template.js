@@ -35,3 +35,6 @@ function getTemplateToBasket(indexBas) {
   `;
 }
 
+
+
+

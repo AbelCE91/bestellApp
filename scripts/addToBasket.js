@@ -1,13 +1,13 @@
 function renderBasket() {
   let total = 0;
   let warenkorb = `
-  <div class="warenkorbIcons">
-   
-    
-  </div>`;
+    <div class="warenkorbIcons">
+      <h2>Warenkorb</h2>
+    </div>
+  `;
 
   for (let indexBas = 0; indexBas < basket.length; indexBas++) {
-    warenkorb += getTemplateToBasket(indexBas); 
+    warenkorb += getTemplateToBasket(indexBas);
     total += basket[indexBas].price * basket[indexBas].quantity;
   }
 
@@ -19,10 +19,15 @@ function renderBasket() {
   `;
 
   const basketRef = document.getElementById("basket");
-  if (basketRef) basketRef.innerHTML = warenkorb;
+  const basketFestRef = document.getElementById("basketFest");
 
-
+  if (basketRef) 
+    basketRef.innerHTML = warenkorb;
+  if (basketFestRef) 
+    basketFestRef.innerHTML = warenkorb;
 }
+
+
 
 
 
@@ -46,3 +51,4 @@ function addToBasket(element) {
   renderBasket();
 }
 
+  

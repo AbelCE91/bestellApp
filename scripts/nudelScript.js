@@ -21,25 +21,32 @@ function buy(indexMenuNudel) {
 
 }
 
-function deleteBasket(indexBas) {
-    basket.splice(indexBas,1)
-    renderBasket()
-    saveToLocalStorage()
-}
-
 function minusIndexBasket(indexBas) {
-    if (basket[indexBas].quantity >1) {
-        basket[indexBas].quantity -=1
-        
-    }
-    renderBasket()
-    saveToLocalStorage()
+  basket[indexBas].quantity -=1;
+  saveToLocalStorage()
+   renderBasket();
+   
 }
 
 function buyIndexBasket(indexBas) {
-basket[indexBas].quantity +=1
- renderBasket()
- saveToLocalStorage()
+  basket[indexBas].quantity+=1;
+  saveToLocalStorage()
+   renderBasket();
+   
 }
 
+function deleteBasket(indexBas) {
+  basket.splice(indexBas, 1)
+  saveToLocalStorage()
+  renderBasket();
+ 
+}
 
+function minusIndexBasket(indexBas) {
+  if (basket[indexBas].quantity > 1) {
+    basket[indexBas].quantity -= 1;
+  }
+  saveToLocalStorage()
+  renderBasket();
+  
+}
