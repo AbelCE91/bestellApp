@@ -1,8 +1,9 @@
   .basket-total{
  margin-left: 20px;
 }
-    .warenkorb{
-    margin-left: 10px;   
+
+  .warenkorb{
+  margin-left: 10px;   
 }
   
 .basket {
@@ -22,6 +23,14 @@
     background-color: white;
     box-shadow: -19px 2px 13px -6px rgba(0,0,0,0.56);
     z-index: 800;
+}
+
+#basketFest {
+  max-height: 100vh;
+  overflow-y:scroll;
+  padding: 1rem;
+  background: #fff;
+  border: 1px solid #ccc;
 }
 
 

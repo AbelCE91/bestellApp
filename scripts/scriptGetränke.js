@@ -19,7 +19,7 @@ function renderGetränk() {
 function buy(indexGetränk) {
   addToBasket(getränke[indexGetränk]).quantity +=1
   renderGetränk()
-saveToLocalStorage()
+  saveToLocalStorage()
 }
 
 function minusIndexBasket(indexBas) {
@@ -40,13 +40,9 @@ function buyIndexBasket(indexBas) {
 function deleteBasket(indexBas) {
     basket.splice(indexBas,1)
      saveToLocalStorage()
-  renderBasket();
+     renderBasket();
 }
 
-
-// Ejecutar al cargar y al redimensionar
-window.addEventListener('DOMContentLoaded', ajustarBasket);
-window.addEventListener('resize', ajustarBasket);
 
 function Starrender() {
   const stars = document.querySelectorAll(".stars i");

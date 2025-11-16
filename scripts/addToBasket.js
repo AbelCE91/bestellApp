@@ -24,15 +24,11 @@ const basketRef = document.getElementById("basket");
       </div>
     `;
   }
-
-  
   const basketFestRef = document.getElementById("basketFest");
-
   if (basketRef) 
     basketRef.innerHTML = warenkorb;
   if (basketFestRef) 
     basketFestRef.innerHTML = warenkorb;
-
 }
 
 function saveToLocalStorage() {
