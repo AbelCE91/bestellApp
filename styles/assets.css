@@ -1,6 +1,5 @@
 .addicon{
     width: 30px;
-   
 }
 
 .addicon:hover{
@@ -16,12 +15,10 @@
     
 }
 
-
 .iconsQuantityminus,
 .iconsQuantityplus {
   width: 20px;
-  
- 
+
 }
 
 .iconsQuantityminus:hover,
@@ -30,8 +27,6 @@
    transform: scale(1.25);
    cursor: pointer;
 }
-
-
 
 .iconsX{
     display: flex;
@@ -59,11 +54,10 @@
     height: 35px;
 }
 .header-icons{
- display: flex;
- justify-content: space-between;
- align-items: center;
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
 }
-
 
 .xwarenkorb{
     width: 20px;
@@ -74,11 +68,24 @@
 .warenkorbIcons{
     display: flex;
     justify-content: space-between;
-
+    margin-top: 70px;
+    margin-left: 80px;
 }
 
-.warenkorbIconsDialog{display: flex;
-    justify-content: space-between;}
+.linksAndContent{
+    width: calc(100% - 340px);
+}
+
+.onlylinks{
+    display: flex;
+    justify-content: space-around;
+    font-family: "Noto Serif", serif;
+    font-optical-sizing: auto;
+    font-weight: 194;
+    font-style: normal;
+    font-variation-settings:"wdth" 100;
+}
+
 .linkgerichte1{
     text-decoration: none;
     display: flex;
@@ -90,30 +97,16 @@
 
 .linkgerichte1:hover{
     text-decoration: underline;
-    
-    
-}
-
-.linkgerichte1{
-    text-decoration: none;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    color: black;
-    border-radius: 10px;
 }
 
 .linkgerichte1:hover{
     text-decoration: underline;
-    
-    
 }
 
 .imglinks1 {
   border: solid 1px transparent; /* ya reserva espacio para el borde */
   border-radius: 10px;
   width: 150px;
- 
 }
 
 .imglinks1:hover {

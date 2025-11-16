@@ -1,34 +1,36 @@
-
-     
-    .basket-total{
+  .basket-total{
  margin-left: 20px;
-
 }
     .warenkorb{
-    margin-left: 10px;
+    margin-left: 10px;   
 }
-    
-    /* Estilo base: oculto por defecto */
-.basket {
   
+.basket {
   background-color: white;
   width: 600px;
   height: 600px;
   flex-direction: column;
-  pointer-events: none;
   padding-bottom: 20px;
-
 }
 
 .basketFest {
-    
-    position: absolute;
+    position: fixed;
+    top: 0;
     right: 0;
+    bottom: 0;
     width: 300px;
-    height: 100vh;
     background-color: white;
-    border-left: 1px solid #ccc;
-    padding: 1rem;
+    box-shadow: -19px 2px 13px -6px rgba(0,0,0,0.56);
+    z-index: 800;
+}
+
+
+/*media responsive*/
+
+@media (min-width: 750px) {
+  dialog {
+    display: none
+  }
 }
 
 @media (max-width: 750px) {
@@ -39,20 +41,18 @@
 
 
 @media(max-width:859px){
-
   footer{
     margin-top: 150px;
   }
   .basket{
     padding-bottom: 130px;
-  }
-  
+  } 
 }
 
-    @media(max-width:500px){
-   .footerlinks{
-    padding-left: 0;
-   }
+ @media(max-width:500px){
+  .footerlinks{
+     padding-left: 0;
+}
    
   footer{
     margin-top: 200px;

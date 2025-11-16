@@ -4,6 +4,8 @@ function init() {
     getFromLocalStorage()
     render()
     renderBasket()
+    Starrender()
+
     
   
 }
@@ -20,36 +22,58 @@ function render() {
 
 function buy(indexMenu) {
   addToBasket(myMenu[indexMenu]);
+  window.buy = buy;
 }
 
-function minusIndexBasket(indexBas) {
-  basket[indexBas].quantity -=1;
-  saveToLocalStorage()
-   renderBasket();
-   
-}
+
 
 function buyIndexBasket(indexBas) {
   basket[indexBas].quantity+=1;
+  window.buyIndexBasket = buyIndexBasket;
   saveToLocalStorage()
    renderBasket();
-   
+
 }
 
 function deleteBasket(indexBas) {
   basket.splice(indexBas, 1)
+    window.deleteBasket = deleteBasket;
   saveToLocalStorage()
   renderBasket();
- 
+  
 }
 
 function minusIndexBasket(indexBas) {
   if (basket[indexBas].quantity > 1) {
-    basket[indexBas].quantity -= 1;
+     basket[indexBas].quantity -= 1;
   }
+   window.minusIndexBasket = minusIndexBasket;
   saveToLocalStorage()
   renderBasket();
-  
+
+}
+
+function Starrender() {
+  const stars = document.querySelectorAll(".stars i");
+  let savedSuperstar = localStorage.getItem("superstar");
+
+  // Restaurar visualmente la calificación guardada
+  if (savedSuperstar) {
+    stars.forEach((star, index) => {
+      star.classList.toggle("active", index < savedSuperstar);
+    });
+  }
+
+  // Escuchar clics y guardar nueva calificación
+  stars.forEach((star, index1) => {
+    star.addEventListener("click", () => {
+      localStorage.setItem("superstar", index1 + 1); // guarda la calificación
+
+      stars.forEach((star, index2) => {
+        star.classList.toggle("active", index2 <= index1);
+      });
+    });
+  });
 }
 
 

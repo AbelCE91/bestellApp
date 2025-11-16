@@ -2,7 +2,7 @@ function initGetränk() {
   getFromLocalStorage()
 renderGetränk()
 renderBasket()
-
+Starrender()
     
 }
 
@@ -44,34 +44,29 @@ function deleteBasket(indexBas) {
 }
 
 
-
-function ajustarBasket() {
-  const basket = document.getElementById('basket');
-
-  // En pantallas grandes, asegúrate de que esté oculto
-  if (window.innerWidth > 750) {
-    basket.classList.remove('visible');
-  }
-}
-
-function burgerMenu() {
-  const basket = document.getElementById('basket');
-
-  // Solo permite toggle en pantallas pequeñas
-  if (window.innerWidth <= 750) {
-    basket.classList.add('visible');
-  }
-}
-
-function Xicon() {
-  if (basket) {
-    const basketRef = document.getElementById("basket");
-
-    basketRef.classList.remove('visible')
-    
-  }
-  
-}
 // Ejecutar al cargar y al redimensionar
 window.addEventListener('DOMContentLoaded', ajustarBasket);
 window.addEventListener('resize', ajustarBasket);
+
+function Starrender() {
+  const stars = document.querySelectorAll(".stars i");
+  let savedSuperstar = localStorage.getItem("superstar");
+
+  // Restaurar visualmente la calificación guardada
+  if (savedSuperstar) {
+    stars.forEach((star, index) => {
+      star.classList.toggle("active", index < savedSuperstar);
+    });
+  }
+
+  // Escuchar clics y guardar nueva calificación
+  stars.forEach((star, index1) => {
+    star.addEventListener("click", () => {
+      localStorage.setItem("superstar", index1 + 1); // guarda la calificación
+
+      stars.forEach((star, index2) => {
+        star.classList.toggle("active", index2 <= index1);
+      });
+    });
+  });
+}

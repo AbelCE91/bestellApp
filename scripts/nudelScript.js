@@ -2,7 +2,7 @@ function initNudel() {
   getFromLocalStorage()
      renderNudel()
      renderBasket()
-     
+     Starrender()
 }
 
 
@@ -21,12 +21,7 @@ function buy(indexMenuNudel) {
 
 }
 
-function minusIndexBasket(indexBas) {
-  basket[indexBas].quantity -=1;
-  saveToLocalStorage()
-   renderBasket();
-   
-}
+
 
 function buyIndexBasket(indexBas) {
   basket[indexBas].quantity+=1;
@@ -49,4 +44,27 @@ function minusIndexBasket(indexBas) {
   saveToLocalStorage()
   renderBasket();
   
+}
+
+function Starrender() {
+  const stars = document.querySelectorAll(".stars i");
+  let savedSuperstar = localStorage.getItem("superstar");
+
+  // Restaurar visualmente la calificación guardada
+  if (savedSuperstar) {
+    stars.forEach((star, index) => {
+      star.classList.toggle("active", index < savedSuperstar);
+    });
+  }
+
+  // Escuchar clics y guardar nueva calificación
+  stars.forEach((star, index1) => {
+    star.addEventListener("click", () => {
+      localStorage.setItem("superstar", index1 + 1); // guarda la calificación
+
+      stars.forEach((star, index2) => {
+        star.classList.toggle("active", index2 <= index1);
+      });
+    });
+  });
 }
