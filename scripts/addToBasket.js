@@ -1,34 +1,62 @@
 function renderBasket() {
-  let total = 0;
-  let warenkorb = `
+  
+    let warenkorb = `
     <div class="warenkorbIcons">
       <h2>Warenkorb</h2>
     </div>
+   
   `;
+  
 const basketRef = document.getElementById("basket");
   for (let indexBas = 0; indexBas < basket.length; indexBas++) {
-    warenkorb += getTemplateToBasket(indexBas);
-    total += basket[indexBas].price * basket[indexBas].quantity;
+    warenkorb += getTemplateToBasket(indexBas);   
   }
 
- if (total > 0 && total < 20) {
-    total += 5;
-    warenkorb += `<br><p class="basket-overprice">+5€ Lieferkosten (ab 20€ Einkauf kostenfrei)</p>`;
-  }
+  const result = lieferrender(basket);
+  warenkorb += result.lieferkosten;
 
-  if (total > 0) {
-    warenkorb += `
-      <div>
-        <hr>
-        <p class="basket-total"><strong>Total:</strong> ${total.toFixed(2)}€</p>
-      </div>
-    `;
-  }
   const basketFestRef = document.getElementById("basketFest");
   if (basketRef) 
     basketRef.innerHTML = warenkorb;
   if (basketFestRef) 
     basketFestRef.innerHTML = warenkorb;
+}
+
+function lieferrender(basket) {
+  let total = 0;
+  let lieferkosten = "";
+ for (let indexBas = 0; indexBas < basket.length; indexBas++) {
+  total += basket[indexBas].price * basket[indexBas].quantity;
+}
+
+  if (total > 0 && total < 20) {
+    total += 5;
+    lieferkosten += `<br><p class="basket-overprice">+5€ Lieferkosten (ab 20€ Einkauf kostenfrei)</p>`;
+  }
+
+  if (total > 0) {
+    lieferkosten += `
+      <div>
+        <hr>
+        <p class="basket-total"><strong>Total:</strong> ${total.toFixed(2)}€</p>
+         <button class="bestellbutton" onclick="bestellen()">bestellens</button>
+         
+      </div>
+    `;
+  }
+  return { total, lieferkosten };
+}
+
+function bestellen() {
+  if (basket.length > 0) {
+  basket = [];
+  const messageRef = document.getElementById("bestellungerfolgreich");
+  messageRef.innerHTML = `<p class="bestell-confirmation">✅ Bestellung erfolgreich!!</p>`;
+
+    saveToLocalStorage();
+    renderBasket();
+
+  } 
 }
 
 function saveToLocalStorage() {

@@ -116,6 +116,24 @@
     width: 40px;
 }
 
+.bestellbutton{
+    font-size: 20px;
+    background-color: orange;
+    margin-left: 100px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    margin-top: 10px;
+  
+
+}
+.bestellbutton:hover{
+     transition: transform 0.2s ease;
+    transform: scale(1.15);
+    background-color: rgb(255, 201, 101);
+
+}
+
 @media(min-width:750px){
     .imgbasket{
         display: none;

@@ -17,6 +17,7 @@ function getTemplateMenu(indexMenu) {
 function getTemplateToBasket(indexBas) {
     let box = basket[indexBas];
   return `
+  
     <div>
       <p class="trashname"><strong>${box.name}</strong> <img onclick="deleteBasket(${indexBas})" class="trash" src="./icons/trash.png" alt=""> </p>
       <span class="iconsX">
@@ -29,7 +30,7 @@ function getTemplateToBasket(indexBas) {
         </div>
       </span>
       <p class="pricequantity">${box.price * box.quantity}€</p>
-
+    
     </div>
     
   `;
