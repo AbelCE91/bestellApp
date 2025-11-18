@@ -78,7 +78,7 @@ footer{
     background-color: orange;
     width: 100%;
     height: 70px;
-    margin-top: 250px;
+    margin-top: 350px;
     display: flex;
     justify-content: center;  
 }
@@ -113,53 +113,70 @@ footer{
     color: gold;
 }
 
- @media(max-width:430px){
+
+@media(max-width: 1500px){
+  .starBox{
+    padding-top: 30px;
+  }
+
   footer{
-    margin-top: 300px;
+    margin-top: 470px;
+  }
+}
+@media(max-width:1170px){
+   .titleLink{
+    margin-top: 150px;
   }
 }
 
- @media(max-width:412px){
+@media(max-width:600px){
+
   footer{
-    margin-top: 400px;
+    margin-top: 520px;
   }
+
 }
 
+@media(max-width:500px){
 
- @media(max-width:385px){
   footer{
-    margin-top: 220px;
+    margin-top: 600px;
+    flex-direction: column;
+    height: 150px;
+    padding-bottom: 25px;
   }
+  footer a{
+    margin-left: 120px;
+    
+  }
+
 }
 
 @media(max-width:375px){
-  footer{
-    margin-top: 530px;
 
-  }
-}
-
-@media(max-width:370px){
   footer{
-    margin-top: 220px;
+    margin-top: 630px;
   }
+
 }
 
 @media(max-width:360px){
+
   footer{
-    margin-top: 560px;
+    margin-top: 670px;
   }
+
 }
 
-@media(max-width:355px){
+@media(max-width:330px){
+
   footer{
-    margin-top: 2200px;
+    margin-top: 690px;
   }
+
 }
 
-@media(max-width:345px){
-  footer{
-    margin-top: 280px;
-  }
-}
+
+
+
 

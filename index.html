@@ -23,12 +23,13 @@
         <figure class="header-icons">
             <img class="logo" src="./img/Logo.png" alt="">
             <div>
-             <img onclick="burgerMenu()" class="burger" src="./icons/burger-bar.png" alt="">
              <img onclick="opendialog()" class="imgbasket" src="./icons/basket.png" alt="">
+             <span id="imgbasket" class="basket-count">0</span>
+
            </div>
         </figure>
       </header>
-     <dialog id="myDialog">
+     <dialog  id="myDialog">
         <div class="headerDialog">
           <img onclick="closeDialog()" class="xwarenkorb" src="./icons/delete (1).png" alt="">
         </div>
@@ -40,7 +41,11 @@
       <main> 
        <div class="container" class="content">
         <div class="">
-           <h1>Bambini Itlaian Restaurant</h1>
+           <div class="title">
+            <span class="bambini">Bambini</span>
+            <span class="italian"> Itlaian</span>
+            <span class="restaurant"> Restaurant</span>
+          </div>
            
         </div>
            <div class="basketFest" id="basketFest" ></div>

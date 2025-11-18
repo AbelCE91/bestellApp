@@ -25,7 +25,7 @@
     z-index: 800;
 }
 
-#basketFest {
+.basketFest {
   max-height: 100vh;
   overflow-y:scroll;
   padding: 1rem;
@@ -36,39 +36,17 @@
 
 /*media responsive*/
 
-@media (min-width: 750px) {
+@media (min-width: 1000px) {
   dialog {
     display: none
   }
 }
 
-@media (max-width: 750px) {
+@media (max-width: 1000px) {
   .basketFest {
     display: none
   }
 }
 
 
-@media(max-width:859px){
-  footer{
-    margin-top: 150px;
-  }
-  .basket{
-    padding-bottom: 130px;
-  } 
-}
 
- @media(max-width:500px){
-  .footerlinks{
-     padding-left: 0;
-}
-   
-  footer{
-    margin-top: 200px;
-    flex-direction: column;
-    align-items: center;
-    height: 150px;
-    padding-bottom: 20px;
-  }
-
-    }

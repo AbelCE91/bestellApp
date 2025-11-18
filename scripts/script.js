@@ -5,8 +5,7 @@ function init() {
     render()
     renderBasket()
     Starrender()
-  
-  
+
 }
 
 function render() {

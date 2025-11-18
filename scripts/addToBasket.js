@@ -1,8 +1,8 @@
 function renderBasket() {
-  
+    let total = 0;
     let warenkorb = `
     <div class="warenkorbIcons">
-      <h2>Warenkorb</h2>
+      <h2 class="warenkorbText">Warenkorb</h2>
     </div>
    
   `;
@@ -20,6 +20,29 @@ const basketRef = document.getElementById("basket");
     basketRef.innerHTML = warenkorb;
   if (basketFestRef) 
     basketFestRef.innerHTML = warenkorb;
+  basketnum()
+
+    let lieferkosten = "";
+ for (let indexBas = 0; indexBas < basket.length; indexBas++) {
+  total += basket[indexBas].price * basket[indexBas].quantity;
+}
+
+  if (total > 0 && total < 20) {
+    total += 5;
+    lieferkosten += `<br><p class="basket-overprice">+5€ Lieferkosten (ab 20€ Einkauf kostenfrei)</p>`;
+  }
+
+  if (total > 0) {
+    lieferkosten += `
+      <div>
+        <hr>
+        <p class="basket-total"><strong>Total:</strong> ${total.toFixed(2)}€</p>
+         <button class="bestellbutton" onclick="bestellen()">bestellens</button>
+         
+      </div>
+    `;
+  }
+  return { total, lieferkosten };
 }
 
 function lieferrender(basket) {
@@ -50,14 +73,32 @@ function lieferrender(basket) {
 function bestellen() {
   if (basket.length > 0) {
   basket = [];
-  const messageRef = document.getElementById("bestellungerfolgreich");
-  messageRef.innerHTML = `<p class="bestell-confirmation">✅ Bestellung erfolgreich!!</p>`;
+  const testBestellung = document.getElementById("bestellungerfolgreich");
+  testBestellung.innerHTML = `<p class="bestell-confirmation">✅ Bestellung erfolgreich!!</p>`;
 
     saveToLocalStorage();
     renderBasket();
+    basketnum()
 
   } 
 }
+
+function basketnum() {
+  const basketNumRef = document.getElementById("imgbasket");
+
+  let totalNum = 0;
+  for (let indexBas = 0; indexBas < basket.length; indexBas++) {
+    totalNum += basket[indexBas].quantity;
+  }
+
+  if (totalNum > 0) {
+    basketNumRef.textContent = totalNum;
+  } else {
+    basketNumRef.textContent = "0";
+  }
+}
+
+
 
 function saveToLocalStorage() {
   localStorage.setItem("basket", JSON.stringify(basket));
