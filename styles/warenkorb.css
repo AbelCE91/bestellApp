@@ -1,9 +1,9 @@
   .basket-total{
- margin-left: 20px;
+    margin-left: 20px;
 }
 
   .warenkorb{
-  margin-left: 10px;   
+    margin-left: 10px;   
 }
   
 .basket {
@@ -26,15 +26,12 @@
 }
 
 .basketFest {
-  max-height: 100vh;
-  overflow-y:scroll;
-  padding: 1rem;
-  background: #fff;
-  border: 1px solid #ccc;
+    max-height: 100vh;
+    overflow-y:scroll;
+    padding: 1rem;
+    background: #fff;
+    border: 1px solid #ccc;
 }
-
-
-/*media responsive*/
 
 @media (min-width: 1000px) {
   dialog {
@@ -46,7 +43,19 @@
   .basketFest {
     display: none
   }
+
+  .basket{
+    width: 300px;
+  }
 }
+
+@media(max-width: 360px){
+  .basket{
+    width: 250px;
+  }
+}
+
+
 
 
 

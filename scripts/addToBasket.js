@@ -38,7 +38,6 @@ const basketRef = document.getElementById("basket");
         <hr>
         <p class="basket-total"><strong>Total:</strong> ${total.toFixed(2)}€</p>
          <button class="bestellbutton" onclick="bestellen()">bestellens</button>
-         
       </div>
     `;
   }
@@ -62,7 +61,7 @@ function lieferrender(basket) {
       <div>
         <hr>
         <p class="basket-total"><strong>Total:</strong> ${total.toFixed(2)}€</p>
-         <button class="bestellbutton" onclick="bestellen()">bestellens</button>
+         <button class="bestellbutton" onclick="bestellen()">Bestellen</button>
          
       </div>
     `;
@@ -97,8 +96,6 @@ function basketnum() {
     basketNumRef.textContent = "0";
   }
 }
-
-
 
 function saveToLocalStorage() {
   localStorage.setItem("basket", JSON.stringify(basket));

@@ -1,27 +1,27 @@
 let myMenu = [
     {
-        "name":"Pizza margarita",
+        "name":"Pizza Margarita",
         "price" : 10,
-        "description" : "delicious pizza with only Tomato sauce and Mozzarella cheese"
+        "description" : "Leckere Pizza mit Tomatensauce und Mozzarella Käse"
     },
 
 
      {
         "name" : "Pizzabrötchen",
         "price" : 6,
-        "description" : "kleine pizzabrötchen mit kreuterbutter"
+        "description" : "Kleine Pizzabrötchen mit Kreuterbutter"
     },
 
      {
         "name" : "Pizza Haway",
         "price" : 12,
-        "description" : "Delicious Pizza with Ananas for your soul in Haway"
+        "description" : "Leckere Pizza mit Ananas für deine hawaioanishe Seele"
     },
 
      {
         "name" : "Pizza Diabolo",
         "price" : 11,
-        "description" : "Pozza with picant pepperoni"
+        "description" : "Pizza mit sharfem Pepperoni"
     },
 
     {
@@ -33,7 +33,7 @@ let myMenu = [
     {
         "name" : "Pizza fungi",
         "price" : 12,
-        "description" : "Pizza mit champiggnons"
+        "description" : "Pizza mit Champiggnons"
     },
 ]
 

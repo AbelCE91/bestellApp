@@ -98,7 +98,6 @@
     transition: 0.2s ease;
 }
 
-
 .imglinks1 {
   
   border-radius: 10px;
@@ -109,6 +108,7 @@
  border: solid 1px transparent;
   border-color: black; 
 }
+
 .imgbasket{
     width: 40px;
 }
@@ -122,8 +122,8 @@
     cursor: pointer;
     margin-top: 10px;
   
-
 }
+
 .bestellbutton:hover{
      transition: transform 0.2s ease;
     transform: scale(1.15);
@@ -151,7 +151,6 @@
 @media(max-width: 750px){
 .imgbasket{
     cursor: pointer;
-
  }
 }
 
@@ -163,13 +162,14 @@
 }
 
 @media(max-width: 700px){
-    .imglinks1{width: 90px;}
+    .imglinks1{width: 90px;
+    }
 }
 
 @media(max-width: 600px){
     .onlylinks{
          overflow: auto;
-  white-space: nowrap;
+         white-space: nowrap;
     }
     .linkgerichte1{
         display: inline-block;
@@ -182,3 +182,5 @@
         justify-content: unset;
     }
 }
+
+

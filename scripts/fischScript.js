@@ -1,5 +1,5 @@
 function initFisch() {
-  getFromLocalStorage()
+    getFromLocalStorage()
     renderFisch()
     renderBasket()
     Starrender()
@@ -10,8 +10,7 @@ function renderFisch() {
 
     fischRef.innerHTML = "";
     for (let indexFisch = 0; indexFisch < fischMenu.length; indexFisch++) {
-        fischRef.innerHTML += getFischToTemplate(indexFisch);
-        
+    fischRef.innerHTML += getFischToTemplate(indexFisch);
     }
 }
 
@@ -22,9 +21,8 @@ function buy(indexFisch) {
 
 function buyIndexBasket(indexBas) {
   basket[indexBas].quantity+=1;
-  saveToLocalStorage()
+   saveToLocalStorage()
    renderBasket();
- 
    
 }
 
@@ -44,23 +42,18 @@ function minusIndexBasket(indexBas) {
   
 }
 
-
 function Starrender() {
   const stars = document.querySelectorAll(".stars i");
   let savedSuperstar = localStorage.getItem("superstar");
-
-  // Restaurar visualmente la calificación guardada
   if (savedSuperstar) {
     stars.forEach((star, index) => {
       star.classList.toggle("active", index < savedSuperstar);
     });
   }
 
-  // Escuchar clics y guardar nueva calificación
   stars.forEach((star, index1) => {
     star.addEventListener("click", () => {
-      localStorage.setItem("superstar", index1 + 1); // guarda la calificación
-
+      localStorage.setItem("superstar", index1 + 1);
       stars.forEach((star, index2) => {
         star.classList.toggle("active", index2 <= index1);
       });

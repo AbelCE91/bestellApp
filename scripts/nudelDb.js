@@ -9,13 +9,13 @@ let nudelMenu = [
         {
         "name" : "Spagueti Carbonara",
         "price" : 14,
-        "description" : "Nudeln Gericht mit einem sehr leckeres italienisches rezept, mit speck, ei und parmesan Käse"
+        "description" : "Nudeln Gericht mit einem sehr leckeres italienisches rezept, mit Speck, Ei und parmesan Käse"
     },
 
         {
         "name" : "Spagueti al Pesto",
         "price" : 11,
-        "description" : "Typisches Nudelgericht mit pesto, (basilikum, Olivenöl und Parmesan)"
+        "description" : "Typisches Nudelgericht mit Pesto, (Basilikum, Olivenöl und Parmesan)"
     },
 
         {
@@ -27,13 +27,13 @@ let nudelMenu = [
         {
         "name" : "Penne mit champignonssauce",
         "price" : 12,
-        "description" : "Nudelngericht mit champignonssauce basiert mit kochsahne"
+        "description" : "Nudelngericht mit Champignonssauce basiert mit kochsahne"
     },
 
         {
         "name" : "Spinat Rabioli",
         "price" : 10.5,
-        "description" : "SpinatRabioli mit tomatensauce"
+        "description" : "SpinatRabioli mit Tomatensauce"
     },
 ]
 

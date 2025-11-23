@@ -2,7 +2,7 @@ let beilageMenu = [
     {
         "name":"Pommes",
         "price": 3.5,
-        "description":"fritierte geschelte kartoffeln"
+        "description":"Fritierte geschälte Kartoffeln"
     },
 
     {
@@ -14,13 +14,13 @@ let beilageMenu = [
       {
         "name":"Brot",
         "price": 2,
-        "description":"Brot als beilage für Nudelngerichte"
+        "description":"Brot als Beilage für Nudelngerichte"
     },
 
     {
         "name":"Ketch-up",
         "price": 1,
-        "description":"Ketch-up Suce"
+        "description":"Ketch-up Sauce"
     },
 
     {

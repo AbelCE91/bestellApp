@@ -13,22 +13,21 @@
     <script src="scripts/dbbeilage.js"></script>
     <script src="scripts/templatebeilage.js"></script>    
      <script src="scripts/scritpbeilage.js"></script>
-       <link rel="preconnect" href="https://fonts.googleapis.com">
+     <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Delius&family=Noto+Serif:ital,wght@0,706;1,706&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=TASA+Explorer:wght@400..800&display=swap" rel="stylesheet">
+       
 </head>
 <body onload="init1()">
       <header>
         <figure class="header-icons">
             <img class="logo" src="./img/Logo.png" alt="">
-            <div>
-            
+            <div>            
             <img onclick="opendialog()" class="imgbasket" src="./icons/basket.png" alt="">
             <span id="imgbasket" class="basket-count">0</span>
            </div>
         </figure>
       </header>
-
      <dialog id="myDialog">
             <div class="headerDialog">
               <img onclick="closeDialog()" class="xwarenkorb" src="./icons/delete (1).png" alt="">
@@ -46,11 +45,12 @@
             <span class="italian"> Itlaian</span>
             <span class="restaurant"> Restaurant</span>
           </div>
+          <h2 class="titleweb">BEILAGE</h2>
            <div class="basketFest" id="basketFest"> </div>
            <p id="total-price-fest"></p>
           <div class="titleLink">
             <div class="starBox">
-              <h2>Beilage bewerten</h2>
+              <h2 class="pizzasbewerten">Beilagen bewerten</h2>
              <div class="stars">
               <i class="fa-solid fa-star"></i>
               <i class="fa-solid fa-star"></i>
@@ -63,7 +63,7 @@
                    <div class="linksAndContent"> 
                       <div class="onlylinks">   
                         <a class="linkgerichte1" href="index.html"><img class="imglinks1" src="./img/pizzas.jpg" alt=""><p>Pizzas</p></a>
-                        <a class="linkgerichte1" href="nudel.html"><img class="imglinks1" src="./img/nudeln.jpg" alt=""><p>Nudel</p></a>
+                        <a class="linkgerichte1" href="nudel.html"><img class="imglinks1" src="./img/nudeln.jpg" alt=""><p class="pnudel">Nudel</p></a>
                         <a class="linkgerichte1" href="Fleisch.html"><img class="imglinks1" src="./img/fleish.jpg" alt=""><p>Fleisch</p></a>
                         <a class="linkgerichte1" href="fisch.html"><img class="imglinks1" src="./img/fish.jpg" alt=""><p>Fisch</p></a>
                         <a class="linkgerichte1" href="beilage.html"><img class="imglinks1" src="./img/beilage.jpg" alt=""><p>Beilage</p></a>
@@ -74,15 +74,12 @@
                 </div>  
               </div>
       </main>
-
       <footer>
         <a class="footerlinks" href="datenschutz.html">Datenshutz</a>
         <a class="footerlinks" href="agb.html">AGB</a>
         <a class="footerlinks" href="impressum.html">Impressum</a>
-      </footer>
-    
+      </footer>  
     </div>
-
 </body>
 <script src="scripts/dialog.js"></script>
 </html>

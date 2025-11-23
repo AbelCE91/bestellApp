@@ -8,12 +8,12 @@ let fischMenu = [
        {
         "name" : "Garnelen mit Koktelsauce",
         "price" : 13,
-        "description" : "Grosse Garnellen aus Sicilien, mit Zwiebeln und Koktelsouce"
+        "description" : "Grosse Garnellen mit Zwiebeln und Koktelsouce aus Sicilien"
     },
     {
         "name" : "Dorada im Salz",
         "price" : 16,
-        "description" : "Gebackene Dorada in dicke MeerSalz gedeckt"
+        "description" : "Gebackene Dorada im dicke MeerSalz gedeckt"
     },
     {
         "name" : "Oktopus a la Gallega(Spanische Art)",

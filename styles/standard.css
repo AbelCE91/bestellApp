@@ -2,6 +2,10 @@ body{
     margin: 0;
     margin-block-start: 0;
     margin-block-end: 0;
+    font-family: "TASA Explorer", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: weight;
+    font-style: normal;
 }
 
 header{
@@ -66,6 +70,13 @@ main{
 p{
     margin-block: 0;
     font-size: 20px;
+    font-family: "TASA Explorer", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+}
+
+.pnudel{
+  margin-top: 15px;
 }
 
 .description{
@@ -78,7 +89,7 @@ footer{
     background-color: orange;
     width: 100%;
     height: 70px;
-    margin-top: 350px;
+    margin-top: 500px;
     display: flex;
     justify-content: center;  
 }
@@ -93,9 +104,6 @@ footer{
     margin-left: 10px;
 }
 
-.titleLink{
-    margin-top: 220px;
-}
 
 .starBox{
    margin-left: 20px;
@@ -113,47 +121,33 @@ footer{
     color: gold;
 }
 
-
 @media(max-width: 1500px){
-  .starBox{
-    padding-top: 30px;
-  }
-
+  
   footer{
-    margin-top: 470px;
-  }
-}
-@media(max-width:1170px){
-   .titleLink{
-    margin-top: 150px;
+    margin-top: 500px;
   }
 }
 
 @media(max-width:600px){
-
   footer{
     margin-top: 520px;
   }
-
 }
 
 @media(max-width:500px){
-
   footer{
     margin-top: 600px;
     flex-direction: column;
     height: 150px;
     padding-bottom: 25px;
   }
+
   footer a{
     margin-left: 120px;
-    
   }
-
 }
 
 @media(max-width:375px){
-
   footer{
     margin-top: 760px;
   }
@@ -161,19 +155,16 @@ footer{
 }
 
 @media(max-width:360px){
-
   footer{
-    margin-top: 670px;
+    margin-top: 900px;
   }
 
 }
 
 @media(max-width:330px){
-
   footer{
     margin-top: 690px;
   }
-
 }
 
 
