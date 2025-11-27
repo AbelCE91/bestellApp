@@ -27,11 +27,19 @@
 
 .basketFest {
     max-height: 100vh;
-    overflow-y:scroll;
-    padding: 1rem;
+ 
     background: #fff;
     border: 1px solid #ccc;
 }
+
+.basketScroll {
+  max-height: 70vh;   /* altura máxima visible */
+  overflow-y: auto;    /* scroll vertical */
+  overflow-x: hidden;  /* evita scroll horizontal */
+  padding: 8px;
+}
+
+
 
 @media (min-width: 1000px) {
   dialog {
@@ -51,7 +59,7 @@
 
 @media(max-width: 360px){
   .basket{
-    width: 250px;
+    width: 230px;
   }
 }
 

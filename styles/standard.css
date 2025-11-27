@@ -121,10 +121,10 @@ footer{
     color: gold;
 }
 
-@media(max-width: 1500px){
+@media(max-width: 1900px){
   
   footer{
-    margin-top: 500px;
+    margin-top: 700px;
   }
 }
 
@@ -158,12 +158,15 @@ footer{
   footer{
     margin-top: 900px;
   }
-
+  footer a{
+    margin-left: 100px;
+  }
+  
 }
 
 @media(max-width:330px){
   footer{
-    margin-top: 690px;
+    margin-top: 750px;
   }
 }
 

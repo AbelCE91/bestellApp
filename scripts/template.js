@@ -24,7 +24,7 @@ function getTemplateToBasket(indexBas) {
       <div>
         <img onclick="minusIndexBasket(${indexBas})" class="iconsQuantityminus" src="./icons/menos.png" alt="">
        </div> 
-        <p>x(${box.quantity})</p>
+        <p class="x">x(${box.quantity})</p>
         <div>
         <img onclick="buyIndexBasket(${indexBas})" class="iconsQuantityplus" src="./icons/mas.png" alt="">
         </div>
@@ -34,6 +34,41 @@ function getTemplateToBasket(indexBas) {
     </div>
     
   `;
+}
+
+function getTemplateWarenkorb() {
+  return`
+   <div class="warenkorbIcons">
+      <h2 class="warenkorbText">Warenkorb</h2>
+    </div>
+  `
+}
+
+function getLieferkostenToTemplate() {
+return`
+  <br><p class="basket-overprice">+5€ Lieferkosten (ab 20€ Einkauf kostenfrei)</p>`
+}
+
+function getTemplatetoTotalBestellen(total) {
+  return`
+      <div>
+        <hr>
+        <p class="basket-total"><strong>Total:</strong> ${total.toFixed(2)}€</p> 
+        <button class="bestellbutton" onclick="bestellen()">bestellen</button>
+      </div>
+    `
+  
+}
+
+function getBestellungToTemplate() {
+  return`<p class="bestell-confirmation">✅ Bestellung erfolgreich!!</p>`
+}
+
+function getTemplateToScroll() {
+  return`
+  <div class="basketScroll">${warenkorb}</div>
+  `
+  
 }
 
 

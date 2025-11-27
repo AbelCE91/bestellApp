@@ -1,71 +1,66 @@
 function renderBasket() {
-    let total = 0;
-    let warenkorb = `
-    <div class="warenkorbIcons">
-      <h2 class="warenkorbText">Warenkorb</h2>
-    </div>
-   
-  `;
-  
-const basketRef = document.getElementById("basket");
-  for (let indexBas = 0; indexBas < basket.length; indexBas++) {
-    warenkorb += getTemplateToBasket(indexBas);   
-  }
+  let total = calculateTotal(basket);
+  const deliveryCost = deliveryCostBlock(basket, total);
 
-  const result = lieferrender(basket);
-  warenkorb += result.lieferkosten;
+  let warenkorb = getTemplateWarenkorb();
+  warenkorb += buildBasketElements(basket);
+  warenkorb += deliveryCost.lieferkosten;
 
-  const basketFestRef = document.getElementById("basketFest");
-  if (basketRef) 
-    basketRef.innerHTML = warenkorb;
-  if (basketFestRef) 
-    basketFestRef.innerHTML = warenkorb;
-  basketnum()
-
-    let lieferkosten = "";
- for (let indexBas = 0; indexBas < basket.length; indexBas++) {
-  total += basket[indexBas].price * basket[indexBas].quantity;
+  updateBasket(warenkorb);
+  basketnum();
+  return { total: deliveryCost.total, lieferkosten: deliveryCost.lieferkosten };
 }
+
+function buildBasketElements(basket) {
+  let warenkorb = ""
+   for (let indexBas = 0; indexBas < basket.length; indexBas++) {
+    warenkorb += getTemplateToBasket(indexBas);   
+  
+  }
+  return `
+  <div class="basketScroll">${warenkorb}</div>
+  `
+}
+
+function deliveryCostBlock(basket, total) {
+  const result = deliveryRender(basket);
+  let lieferkosten = result.lieferkosten;
 
   if (total > 0 && total < 20) {
     total += 5;
-    lieferkosten += `<br><p class="basket-overprice">+5€ Lieferkosten (ab 20€ Einkauf kostenfrei)</p>`;
+    lieferkosten += getLieferkostenToTemplate();
   }
 
   if (total > 0) {
-    lieferkosten += `
-      <div>
-        <hr>
-        <p class="basket-total"><strong>Total:</strong> ${total.toFixed(2)}€</p>
-         <button class="bestellbutton" onclick="bestellen()">bestellens</button>
-      </div>
-    `;
+    lieferkosten += getTemplatetoTotalBestellen(total);
   }
+
   return { total, lieferkosten };
 }
 
-function lieferrender(basket) {
+function updateBasket(warenkorb) {
+  const basketRef = document.getElementById("basket");
+  const basketFestRef = document.getElementById("basketFest");
+
+  if (basketRef) basketRef.innerHTML = warenkorb;
+  if (basketFestRef) basketFestRef.innerHTML = warenkorb;
+}
+
+ function calculateTotal(basket) {
+  let total = 0;
+    for (let indexBas = 0; indexBas < basket.length; indexBas++) {
+    total += basket[indexBas].price * basket[indexBas].quantity;
+  }
+  return total;
+ }
+
+function deliveryRender(basket) {
   let total = 0;
   let lieferkosten = "";
  for (let indexBas = 0; indexBas < basket.length; indexBas++) {
   total += basket[indexBas].price * basket[indexBas].quantity;
 }
 
-  if (total > 0 && total < 20) {
-    total += 5;
-    lieferkosten += `<br><p class="basket-overprice">+5€ Lieferkosten (ab 20€ Einkauf kostenfrei)</p>`;
-  }
-
-  if (total > 0) {
-    lieferkosten += `
-      <div>
-        <hr>
-        <p class="basket-total"><strong>Total:</strong> ${total.toFixed(2)}€</p>
-         <button class="bestellbutton" onclick="bestellen()">Bestellen</button>
-         
-      </div>
-    `;
-  }
   return { total, lieferkosten };
 }
 
@@ -73,7 +68,7 @@ function bestellen() {
   if (basket.length > 0) {
   basket = [];
   const testBestellung = document.getElementById("bestellungerfolgreich");
-  testBestellung.innerHTML = `<p class="bestell-confirmation">✅ Bestellung erfolgreich!!</p>`;
+  testBestellung.innerHTML = getBestellungToTemplate();
 
     saveToLocalStorage();
     renderBasket();
@@ -107,6 +102,11 @@ function getFromLocalStorage() {
 }
 
 function addToBasket(element) {
+  const testBestellung = document.getElementById("bestellungerfolgreich")
+  if (testBestellung) {
+    testBestellung.innerHTML = "";
+  }
+
   let existing = basket.find(el => el.name === element.name);
   if (existing) {
     existing.quantity += 1;

@@ -35,3 +35,31 @@ function getTemplateToBasket(indexBas) {
   `;
 
 }
+
+function getTemplateWarenkorb() {
+  return`
+   <div class="warenkorbIcons">
+      <h2 class="warenkorbText">Warenkorb</h2>
+    </div>
+  `
+}
+
+function getLieferkostenToTemplate() {
+return`
+  <br><p class="basket-overprice">+5€ Lieferkosten (ab 20€ Einkauf kostenfrei)</p>`
+}
+
+function getTemplatetoTotalBestellen(total) {
+  return`
+      <div>
+        <hr>
+        <p class="basket-total"><strong>Total:</strong> ${total.toFixed(2)}€</p>
+        <button class="bestellbutton" onclick="bestellen()">bestellen</button>
+      </div>
+    `
+  
+}
+
+function getBestellungToTemplate() {
+  return`<p class="bestell-confirmation">✅ Bestellung erfolgreich!!</p>`
+}
