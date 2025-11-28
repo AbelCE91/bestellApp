@@ -5,7 +5,6 @@ function opendialog() {
 
 }
 
-
 function closeDialog() {
     dialogRef.close()
 }

@@ -21,12 +21,12 @@ function getTemplateToBasket(indexBasket) {
     <div>
       <p class="trashname"><strong>${boxnudel.name}</strong> <img onclick="deleteBasket(${indexBasket})" class="trash" src="./icons/trash.png" alt=""> </p>
       <span class="iconsX">
-      <div>
-        <img onclick="minusIndexBasket(${indexBasket})" class="iconsQuantityminus" src="./icons/menos.png" alt="">
-       </div> 
-        <p>x(${boxnudel.quantity})</p>
         <div>
-        <img onclick="buyIndexBasket(${indexBasket})" class="iconsQuantityplus" src="./icons/mas.png" alt="">
+         <img onclick="minusIndexBasket(${indexBasket})" class="iconsQuantityminus" src="./icons/menos.png" alt="">
+        </div> 
+         <p>x(${boxnudel.quantity})</p>
+        <div>
+         <img onclick="buyIndexBasket(${indexBasket})" class="iconsQuantityplus" src="./icons/mas.png" alt="">
         </div>
       </span>
       <p class="pricequantity">${boxnudel.price * boxnudel.quantity}€</p>
