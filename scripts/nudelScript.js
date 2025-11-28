@@ -20,15 +20,13 @@ function buy(indexMenuNudel) {
 function buyIndexBasket(indexBas) {
   basket[indexBas].quantity+=1;
    saveToLocalStorage()
-   renderBasket();
-   
+   renderBasket(); 
 }
 
 function deleteBasket(indexBas) {
   basket.splice(indexBas, 1)
   saveToLocalStorage()
-  renderBasket();
- 
+  renderBasket(); 
 }
 
 function minusIndexBasket(indexBas) {
@@ -36,8 +34,7 @@ function minusIndexBasket(indexBas) {
     basket[indexBas].quantity -= 1;
   }
   saveToLocalStorage()
-  renderBasket();
-  
+  renderBasket(); 
 }
 
 function Starrender() {

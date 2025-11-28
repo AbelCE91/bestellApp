@@ -196,11 +196,20 @@ dialog{
   .titleweb{
     margin-left: 100px;
   }
+  .footerlinks{
+    margin-left: 80px;
+  }
+  .titleweb{
+    margin-left: 140px;
+  }
 }
 
 @media(max-width: 375px){
   .titleweb{
     margin-left: 150px;
+  }
+  .footerlinks{
+    margin-left: 80px;
   }
 }
 
@@ -221,7 +230,7 @@ dialog{
   }
 
   .footerlinks{
-    padding-left: 0px;
+    padding-left: 50px;
   }
   
   .titleweb{

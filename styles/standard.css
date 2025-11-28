@@ -73,6 +73,8 @@ p{
     font-family: "TASA Explorer", sans-serif;
     font-optical-sizing: auto;
     font-style: normal;
+    padding-left: 5px;
+    padding-right: 5px;
 }
 
 .pnudel{
@@ -146,29 +148,35 @@ footer{
     margin-left: 120px;
   }
 }
+@media(max-width:415px){
+  footer{
+    margin-top: 800px;
+  }
+
+}
+
+@media(max-width:390px){
+  footer{
+    margin-top: 980px;
+  }
+
+}
 
 @media(max-width:375px){
   footer{
-    margin-top: 760px;
+    margin-top: 1050px;
   }
 
 }
 
 @media(max-width:360px){
-  footer{
-    margin-top: 900px;
-  }
+ 
   footer a{
     margin-left: 100px;
   }
   
 }
 
-@media(max-width:330px){
-  footer{
-    margin-top: 750px;
-  }
-}
 
 
 

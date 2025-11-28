@@ -16,12 +16,11 @@ function render() {
 
 function buy(indexMenu) {
   addToBasket(myMenu[indexMenu]);
-  window.buy = buy;
+  saveToLocalStorage()
 }
 
 function buyIndexBasket(indexBas) {
   basket[indexBas].quantity+=1;
-  window.buyIndexBasket = buyIndexBasket;
   saveToLocalStorage()
    renderBasket();
 }

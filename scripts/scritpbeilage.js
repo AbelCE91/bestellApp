@@ -42,9 +42,6 @@ function minusIndexBasket(indexBasketBei) {
     renderBasket()
 }
 
-window.addEventListener('DOMContentLoaded', ajustarBasket);
-window.addEventListener('resize', ajustarBasket);
-
 function Starrender() {
   const stars = document.querySelectorAll(".stars i");
   let savedSuperstar = localStorage.getItem("superstar");

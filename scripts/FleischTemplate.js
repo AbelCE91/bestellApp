@@ -20,20 +20,17 @@ function getTemplateToBasket(indexBas) {
     <div>
       <p class="trashname"><strong>${fleischbasket.name}</strong> <img onclick="deleteBasket(${indexBas})" class="trash" src="./icons/trash.png" alt=""> </p>
       <span class="iconsX">
-      <div>
-        <img onclick="minusIndexBasket(${indexBas})" class="iconsQuantityminus" src="./icons/menos.png" alt="">
+       <div>
+         <img onclick="minusIndexBasket(${indexBas})" class="iconsQuantityminus" src="./icons/menos.png" alt="">
        </div> 
-        <p>x(${fleischbasket.quantity})</p>
+         <p>x(${fleischbasket.quantity})</p>
         <div>
-        <img onclick="buyIndexBasket(${indexBas})" class="iconsQuantityplus" src="./icons/mas.png" alt="">
+          <img onclick="buyIndexBasket(${indexBas})" class="iconsQuantityplus" src="./icons/mas.png" alt="">
         </div>
       </span>
       <p class="pricequantity">${fleischbasket.price * fleischbasket.quantity}€</p>
-
-    </div>
-    
+    </div>  
   `;
-
 }
 
 function getTemplateWarenkorb() {
@@ -41,7 +38,7 @@ function getTemplateWarenkorb() {
    <div class="warenkorbIcons">
       <h2 class="warenkorbText">Warenkorb</h2>
     </div>
-  `
+     `
 }
 
 function getLieferkostenToTemplate() {
@@ -57,7 +54,6 @@ function getTemplatetoTotalBestellen(total) {
         <button class="bestellbutton" onclick="bestellen()">bestellen</button>
       </div>
     `
-  
 }
 
 function getBestellungToTemplate() {

@@ -27,19 +27,22 @@
 
 .basketFest {
     max-height: 100vh;
- 
+
     background: #fff;
     border: 1px solid #ccc;
 }
 
 .basketScroll {
-  max-height: 70vh;   /* altura máxima visible */
-  overflow-y: auto;    /* scroll vertical */
-  overflow-x: hidden;  /* evita scroll horizontal */
+  max-height: 70vh;   
+  overflow-y: auto;   
+  overflow-x: hidden;  
   padding: 8px;
 }
 
-
+ #myDialog .basketScroll {
+  max-height: 40vh;   
+  padding: 4px;   
+}   
 
 @media (min-width: 1000px) {
   dialog {
@@ -53,13 +56,19 @@
   }
 
   .basket{
+    width: 350px;
+  }
+}
+
+@media(max-width: 390px){
+  .basket{
     width: 300px;
   }
 }
 
 @media(max-width: 360px){
   .basket{
-    width: 230px;
+    width: 270px;
   }
 }
 

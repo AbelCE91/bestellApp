@@ -19,20 +19,18 @@ function getTemplateToBasket(indexBas) {
     let basketGetränk = basket[indexBas];
   return `
     <div>
-      <p class="trashname"><strong>${basketGetränk.name}</strong> <img onclick="deleteBasket(${indexBas})" class="trash" src="./icons/trash.png" alt=""> </p>
+      < p class="trashname"><strong>${basketGetränk.name}</strong> <img onclick="deleteBasket(${indexBas})" class="trash" src="./icons/trash.png" alt=""> </p>
       <span class="iconsX">
-      <div>
-        <img onclick="minusIndexBasket(${indexBas})" class="iconsQuantityminus" src="./icons/menos.png" alt="">
-       </div> 
-        <p>x(${basketGetränk.quantity})</p>
         <div>
-        <img onclick="buyIndexBasket(${indexBas})" class="iconsQuantityplus" src="./icons/mas.png" alt="">
+         <img onclick="minusIndexBasket(${indexBas})" class="iconsQuantityminus" src="./icons/menos.png" alt="">
+        </div> 
+         <p>x(${basketGetränk.quantity})</p>
+        <div>
+         <img onclick="buyIndexBasket(${indexBas})" class="iconsQuantityplus" src="./icons/mas.png" alt="">
         </div>
       </span>
       <p class="pricequantity">${basketGetränk.price * basketGetränk.quantity}€</p>
-
     </div>
-    
   `;
 }
 

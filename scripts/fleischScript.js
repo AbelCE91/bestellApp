@@ -14,7 +14,7 @@ function renderFleisch() {
 }
 
 function buy(indexFleisch) {
-    addToBasket(fleischMenu[indexFleisch]).quantity +=1;
+    addToBasket(fleischMenu[indexFleisch])
     renderFleisch()
 
 }
@@ -33,9 +33,9 @@ function minusIndexBasket(indexBas) {
 }
 
 function buyIndexBasket(indexBas) {
-basket[indexBas].quantity +=1
- renderBasket()
- saveToLocalStorage()
+   basket[indexBas].quantity +=1
+    renderBasket()
+    saveToLocalStorage()
 }
 
 function Starrender() {

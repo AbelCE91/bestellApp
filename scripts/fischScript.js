@@ -16,30 +16,27 @@ function renderFisch() {
 
 function buy(indexFisch) {
   addToBasket(fischMenu[indexFisch]);
+  saveToLocalStorage()
 }
 
-
 function buyIndexBasket(indexBas) {
-  basket[indexBas].quantity+=1;
+   basket[indexBas].quantity+=1;
    saveToLocalStorage()
-   renderBasket();
-   
+   renderBasket();   
 }
 
 function deleteBasket(indexBas) {
   basket.splice(indexBas, 1)
   saveToLocalStorage()
-  renderBasket();
- 
+  renderBasket(); 
 }
 
 function minusIndexBasket(indexBas) {
   if (basket[indexBas].quantity > 1) {
     basket[indexBas].quantity -= 1;
   }
-  saveToLocalStorage()
-  renderBasket();
-  
+   saveToLocalStorage()
+   renderBasket();
 }
 
 function Starrender() {

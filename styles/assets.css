@@ -199,11 +199,7 @@ margin-top: 150px;
     }
 }
 
-@media(max-width: 400px){
-    .iconsX{
-        justify-content: unset;
-    }
-}
+
 
 @media(max-width: 360px){
     .restauranlogo{

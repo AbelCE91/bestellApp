@@ -17,7 +17,7 @@ function renderGetränk() {
 }
 
 function buy(indexGetränk) {
-  addToBasket(getränke[indexGetränk]).quantity +=1
+  addToBasket(getränke[indexGetränk])
   renderGetränk()
   saveToLocalStorage()
 }

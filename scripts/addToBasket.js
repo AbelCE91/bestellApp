@@ -102,16 +102,17 @@ function getFromLocalStorage() {
 }
 
 function addToBasket(element) {
-  const testBestellung = document.getElementById("bestellungerfolgreich")
-  if (testBestellung) {
-    testBestellung.innerHTML = "";
-  }
 
   let existing = basket.find(el => el.name === element.name);
   if (existing) {
     existing.quantity += 1;
   } else {
     basket.push({ ...element, quantity: 1 });
+  }
+  
+   const testBestellung = document.getElementById("bestellungerfolgreich")
+  if (testBestellung) {
+    testBestellung.innerHTML = "";
   }
   saveToLocalStorage();
   renderBasket();
